@@ -44,6 +44,12 @@ This project utilizes Giza Actions to demonstrate verifiable inference for crypt
 3. Update the `source` and `pair` variables in the `generate_forecast` call with your desired values.
 4. Run the script. The script will generate a forecast plot and save it in the plots directory.
 
+| Sources                                               | Pairs  |
+|--------------------------------------------------------------|---------------|
+| ASCENDEX, OKX, BITSTAMP, COINBASE, KAIKO, FLOWDESK, SKYNET_TRADING, GECKOTERMINAL, DEFILLAMA, CEX | ETH/USD, BTC/USD, USDC/USD, DAI/USD |
+
+*The plots use the `COINBASE` source*
+
 
 ## Verifiable Inference
 
@@ -76,7 +82,11 @@ Key Steps:
 - Prints the prediction result and request ID.
 
 **IMPORTANT NOTE:**
-Inverse Transformation: The predicted values will require inverse transformation before being used in further calculations or applications. 
+Inverse Transformation: The predicted values will require inverse transformation before being used in further calculations or applications.
+
+![Verifiable Inference](https://github.com/Kagwep/Crypto-Price-Prediction/blob/main/verifiiable_inverence.PNG)
+
+
  
 ## Data Acquisition Using Pragma Oracle (Optional)
 
