@@ -34,6 +34,10 @@ This project utilizes Giza Actions to demonstrate verifiable inference for crypt
 - Plots the actual and predicted prices.
 - Saves the plot as an image.
 
+![ETH/USD](https://github.com/Kagwep/Crypto-Price-Prediction/blob/main/plots/plot_2024-02-25_17-46-42.png)
+
+![BTC/USD](https://github.com/Kagwep/Crypto-Price-Prediction/blob/main/plots/plot_2024-02-26_16-06-44.png)
+
 ## Usage
 1. Install the required dependencies.
 2. Place your pre-trained model in the same directory as the script (named `forecast-model.onnx`).

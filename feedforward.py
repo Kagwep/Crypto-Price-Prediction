@@ -12,7 +12,7 @@ from giza_actions.task import task
 from giza_actions.action import Action, action
 
 # Load the sample data
-data = pd.read_csv('crypto_data.csv')
+data = pd.read_csv('./data/crypto_data.csv')
 
 test_data = []
 
@@ -25,7 +25,7 @@ def preprocess_data(data, source):
 
 @task(name='Prediction with ONNX')
 def prediction(prices):
-    model = GizaModel(model_path="./forecast-model.onnx")
+    model = GizaModel(model_path="./model/forecast-model.onnx")
     result = model.predict(
         input_feed={"dense_input": prices}, verifiable=False
     )
@@ -88,7 +88,7 @@ def generate_forecast(data, source, pair):
     
     # Save the model to ONNX format
     onnx_model = onnxmltools.convert_keras(model, target_opset=11)
-    onnx_model_path = 'forecast-model.onnx'
+    onnx_model_path = './model/forecast-model.onnx'
     onnxmltools.utils.save_model(onnx_model, onnx_model_path)
     
     # Make predictions for the next 10 minutes
@@ -140,5 +140,5 @@ def generate_forecast(data, source, pair):
 
 # Call the function with desired inputs
 source = 'COINBASE'
-pair = 'ETH/USD'
+pair = 'BTC/USD'
 generate_forecast(data, source, pair)
