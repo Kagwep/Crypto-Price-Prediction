@@ -1,0 +1,21 @@
+[package]
+name = "inference"
+version = "0.1.0"
+edition = "2023_10"
+
+[dependencies]
+node_sequential_dense_5_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_5_matmul_readvariableop_0"} 
+node_sequential_dense_5_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_5_biasadd_readvariableop_0"} 
+node_sequential_dense_4_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_4_matmul_readvariableop_0"} 
+node_sequential_dense_4_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_4_biasadd_readvariableop_0"} 
+node_sequential_dense_3_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_3_matmul_readvariableop_0"} 
+node_sequential_dense_3_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_3_biasadd_readvariableop_0"} 
+node_sequential_dense_2_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_2_matmul_readvariableop_0"} 
+node_sequential_dense_2_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_2_biasadd_readvariableop_0"} 
+node_sequential_dense_1_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_1_matmul_readvariableop_0"} 
+node_sequential_dense_1_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_1_biasadd_readvariableop_0"} 
+node_sequential_dense_matmul_readvariableop_0 = { path = "../initializers/node_sequential_dense_matmul_readvariableop_0"} 
+node_sequential_dense_biasadd_readvariableop_0 = { path = "../initializers/node_sequential_dense_biasadd_readvariableop_0"} 
+orion = { git = "https://github.com/gizatechxyz/orion.git", rev = "7d84a42" } 
+[lib]
+sierra-text = true
