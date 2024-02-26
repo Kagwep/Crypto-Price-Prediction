@@ -44,6 +44,39 @@ This project utilizes Giza Actions to demonstrate verifiable inference for crypt
 3. Update the `source` and `pair` variables in the `generate_forecast` call with your desired values.
 4. Run the script. The script will generate a forecast plot and save it in the plots directory.
 
+
+## Verifiable Inference
+
+`verifiable_inference.py`
+
+Key Steps:
+
+### Import Necessary Libraries:
+- numpy for numerical operations
+- giza_actions.model for interacting with the  Cairo model
+- giza_actions.task for defining tasks
+- giza_actions.action for defining actions
+- tensorflow (optional) for specific model interactions
+
+### Define the prediction Function:
+- Takes data, model ID, and version ID as input.
+- Initializes a GizaModel instance.
+- Calls the predict function with:
+  - verifiable=True to enable verifiable prediction.
+  - output_dtype="arr_fixed_point" to specify expected output format.
+- Returns the prediction result and request ID.
+
+### Define the execution Function:
+- Loads input data from a NumPy array (test_input.npy).
+- Calls the prediction function with data, model ID, and version ID.
+- Returns prediction result and request ID.
+
+### Execute the Prediction and Print Output:
+- Calls the execution function.
+- Prints the prediction result and request ID.
+
+**IMPORTANT NOTE:**
+Inverse Transformation: The predicted values will require inverse transformation before being used in further calculations or applications. 
  
 ## Data Acquisition Using Pragma Oracle (Optional)
 
@@ -90,4 +123,6 @@ If you need to gather a new set of data
 - "Download JSON" button: Downloads data as a JSON file for further analysis or integration.
 
 * navigate into the data directory and use the `process_data.py` file to process the data.
+
+
 # Crypto-Price-Prediction

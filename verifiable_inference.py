@@ -17,7 +17,7 @@ def prediction(data, model_id, version_id):
     (result, request_id) = model.predict(
         input_feed={"dense_input": data}, 
         verifiable=True,
-        output_dtype="Tensor<FP16x16>"
+        output_dtype="arr_fixed_point"
     )
     return result, request_id
 
@@ -28,4 +28,5 @@ def execution():
     (result, request_id) = prediction(data, 369, 2)
     return result, request_id
 
-execution()
+(result, request_id) = execution()
+print(f"Result: {result}, Request ID: {request_id}")
