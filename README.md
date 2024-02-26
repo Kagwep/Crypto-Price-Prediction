@@ -1,7 +1,5 @@
 # Crypto Price Prediction with Verifiable Inference
 
-This project utilizes Giza Actions to demonstrate verifiable inference for .
-
 This project implements cryptocurrency price prediction using a feedforward neural network verifiable inference. It demonstrates how to utilize a Cairo-based model to generate predictions that can be independently verified for integrity and authenticity.
 
 Key components include:
