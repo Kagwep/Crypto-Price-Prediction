@@ -8,14 +8,7 @@ import { useAppContext } from "../../providers/AppProvider";
 
 const Menu: React.FC = () => (
   <>
-    <Link to="/services">
-      {" "}
-      <p>Services</p>{" "}
-    </Link>
-    <Link to="/checkouts">
-      {" "}
-      <p> Chekouts</p>{" "}
-    </Link>
+
   </>
 );
 
@@ -44,7 +37,7 @@ const Navbar = () => {
         <div className="navbar-links_logo">
           <img src={logo} alt="logo" />
           <Link to="/">
-            <h1>Stark Pay</h1>
+            <h1>Get Data</h1>
           </Link>
         </div>
         <div className="navbar-links_container">
